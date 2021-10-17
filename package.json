@@ -1,6 +1,7 @@
 {
-  "name": "vscode-no-conflict",
+	"name": "vscode-no-conflict",
 	"displayName": "No Conflict",
+	"publisher": "ValentinVignal",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -10,16 +11,30 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:vscode-no-conflict.helloWorld"
+		"onView:no-conflict"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "vscode-no-conflict.helloWorld",
-				"title": "Hello World"
-			}
-		]
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "no-conflict",
+					"title": "No conflict",
+					"icon": "assets/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"no-conflict": [
+				{
+					"type": "webview",
+					"id": "no-conflict",
+					"name": "No conflict",
+					"icon": "assets/icon.svg",
+					"contextualTitle": "No conflict"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
