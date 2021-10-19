@@ -1,7 +1,7 @@
-<div>hello</div>
+<div>hello 1234</div>
 
 <style>
 	div {
-		color: red;
+		color: blue;
 	}
 </style>

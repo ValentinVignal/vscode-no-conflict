@@ -11,7 +11,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onView:no-conflict"
+		"onView:no-conflict",
+		"onCommand:no-conflict.refresh"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -34,7 +35,14 @@
 					"contextualTitle": "No conflict"
 				}
 			]
-		}
+		},
+		"commands": [
+			{
+				"command": "no-conflict.refresh",
+				"category": "No conflict",
+				"title": "Refresh"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
