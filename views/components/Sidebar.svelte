@@ -1,5 +1,17 @@
-<div>hello 1234</div>
+<script lang="ts">
+	let clicks = 0;
+	import { onMount } from "svelte";
+	onMount(() => {
+		window.addEventListener("message", (event) => {
+			console.log("event", event);
+			clicks++;
+		});
+	});
+</script>
 
+<div>hello {clicks}</div>
+
+<!-- svelte-ignore missing-declaration -->
 <button
 	on:click={() => {
 		tsVscode.postMessage({
